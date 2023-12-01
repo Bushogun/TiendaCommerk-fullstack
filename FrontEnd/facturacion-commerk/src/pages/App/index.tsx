@@ -2,9 +2,8 @@ import { useRoutes, BrowserRouter } from 'react-router-dom'
 // import { Providers } from "../../redux/providers";
 import { ReactNode } from 'react'
 // import Navbar from '../../Components/Navbar'
-// import  Home from '../Home'
-// import Alcoholic from '../Alcoholic';
-// import NonAlcoholic from '../Non-Alcoholic';
+import  Welcome from '../Welcome'
+import  Home from '../Home'
 
 type Props = {
   children?: ReactNode
@@ -12,11 +11,15 @@ type Props = {
 
 const AppRoutes = () =>{
   let routes = useRoutes([
-    // { path:'/', element: <Home/> },
-    // { path:'/alcoholic', element: <Alcoholic/> },
-    // { path:'/non-alcoholic', element: <NonAlcoholic/> },
-
-    
+    { path:'/', element: <Welcome/> },
+    // { path:'/login', element: <Login/> },
+    // { path:'/sign-up', element: <Sing-up/> },
+    { path:'/app', element: <Home/> },
+    // { path:'/create-product', element: <CreateProduct/> },
+    // { path:'/view-user', element: <ViewUser/> },
+    // { path:'/view-product', element: <ViewProduct/> },
+    // { path:'/sell', element: <Sell/> },
+    // { path:'/generate-report', element: <GenerateReport/> },
   ])
   return routes
 }
