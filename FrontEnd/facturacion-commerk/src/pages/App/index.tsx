@@ -1,7 +1,7 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom' 
 // import { Providers } from "../../redux/providers";
 import { ReactNode } from 'react'
-// import Navbar from '../../Components/Navbar'
+import Navbar from '../../components/navbar'
 import  Welcome from '../Welcome'
 import  Home from '../Home'
 
