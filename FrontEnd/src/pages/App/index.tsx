@@ -1,8 +1,8 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom'
 import styles from '../App/app.module.css'
-// import { Providers } from "../../redux/providers";
 import { ReactNode } from 'react'
-// import Navbar from '../../components/navbar'
+import { Providers } from "../../redux/providers";
+
 import  Welcome from '../Welcome'
 import  Login from '../LogIn'
 import  SignUp from '../SignUp'
@@ -35,11 +35,10 @@ const App = (props: Props) => {
   return (
     <div className={styles["container"]}>
       <BrowserRouter>
-        {/* <Providers> */}
-        {/* <Navbar /> */}
+        <Providers>
         <AppRoutes/>
           {props.children}
-        {/* </Providers> */}
+        </Providers>
       </BrowserRouter>
     </div>
   )
