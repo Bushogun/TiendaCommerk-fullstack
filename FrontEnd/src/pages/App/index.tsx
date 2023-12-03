@@ -2,11 +2,15 @@ import { useRoutes, BrowserRouter } from 'react-router-dom'
 import styles from '../App/app.module.css'
 // import { Providers } from "../../redux/providers";
 import { ReactNode } from 'react'
-import Navbar from '../../components/navbar'
+// import Navbar from '../../components/navbar'
 import  Welcome from '../Welcome'
 import  Login from '../LogIn'
 import  SignUp from '../SignUp'
 import  Home from '../Home'
+import  ViewProducts from '../ViewProducts'
+import CreateProduct from '../CreateProduct'
+import GenerateSell from '../Sell'
+import GenerateReport from '../GenerateReport'
 
 type Props = {
   children?: ReactNode
@@ -18,11 +22,10 @@ const AppRoutes = () =>{
     { path:'/login', element: <Login/> },
     { path:'/sign-up', element: <SignUp/> },
     { path:'/app', element: <Home/> },
-    // { path:'/create-product', element: <CreateProduct/> },
-    // { path:'/view-user', element: <ViewUser/> },
-    // { path:'/view-product', element: <ViewProduct/> },
-    // { path:'/sell', element: <Sell/> },
-    // { path:'/generate-report', element: <GenerateReport/> },
+    { path:'/view-products', element: <ViewProducts/> },
+    { path:'/create-product', element: <CreateProduct/> },
+    { path:'/generate-sell', element: <GenerateSell/> },
+    { path:'/generate-report', element: <GenerateReport/> },
   ])
   return routes
 }
