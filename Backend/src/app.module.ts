@@ -1,10 +1,9 @@
+import { UsersModule } from './users/users.module';
+import { ProductsModule } from './products/products.module';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersController } from './users/users.controller';
-import { ProductsController } from '../src/products/products.controller';
-import { ReportController } from './report/report.controller';
 
 import { Usuario } from './users/user.entity';
 import { Producto } from './products/product.entity';
@@ -28,8 +27,8 @@ import { DetalleVenta } from './sellDetail/sellDetail.entity';
         trustServerCertificate: true
       }
     }),
-  ],
-  controllers: [AppController, UsersController, ProductsController, ReportController],
+    UsersModule, ProductsModule ],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}

@@ -15,7 +15,7 @@ export class Usuario {
   CorreoElectronico: string;
 
   @Column({ length: 50, nullable: false })
-  Contraseña: string;
+  Contrasena: string;
 
   @Column({ nullable: true })
   TotalVentas: number;
