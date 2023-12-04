@@ -1,10 +1,12 @@
 import { Controller , Get } from '@nestjs/common';
+import { Response } from 'express';
+import * as ExcelJS from 'exceljs';
 
 @Controller('report')
 export class ReportController {
 
   @Get()
-  createProduct(): string {
+  report(): string {
     return "reporte generado"
   }
 

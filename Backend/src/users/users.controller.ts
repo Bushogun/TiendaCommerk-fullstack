@@ -5,7 +5,6 @@ import { Usuario } from './user.entity';
 
 @Controller('users')
 export class UsersController {
-
   constructor(private usersService:UsersService){}
 
   @Get()
@@ -17,5 +16,4 @@ export class UsersController {
   createUser(@Body() newUser:CreateUserDto):Promise<Usuario> {
     return this.usersService.createUser(newUser);
   }
-
 }

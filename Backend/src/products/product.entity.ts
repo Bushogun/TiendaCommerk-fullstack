@@ -20,7 +20,6 @@ export class Producto {
   @Column({ nullable: true })
   Cantidad: number;
 
-
   @Column({ type: 'datetime', nullable: true })
   FechaCreacion: Date;
 }

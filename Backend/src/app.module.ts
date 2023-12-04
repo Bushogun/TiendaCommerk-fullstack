@@ -9,6 +9,7 @@ import { Usuario } from './users/user.entity';
 import { Producto } from './products/product.entity';
 import { Venta } from './sells/sell.entity';
 import { DetalleVenta } from './sellDetail/sellDetail.entity';
+import { SellsModule } from './sells/sell.module';
 
 @Module({
   imports: [
@@ -27,7 +28,7 @@ import { DetalleVenta } from './sellDetail/sellDetail.entity';
         trustServerCertificate: true
       }
     }),
-    UsersModule, ProductsModule ],
+    UsersModule, ProductsModule, SellsModule ],
   controllers: [AppController],
   providers: [AppService],
 })
