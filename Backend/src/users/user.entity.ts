@@ -1,25 +1,29 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Venta } from '../sells/sell.entity';
 
 @Entity()
 export class Usuario {
   @PrimaryGeneratedColumn()
-  UsuarioID: number;
+  id: number;
 
-  @Column({ length: 100, nullable: false })
+  @Column()
   Nombre: string;
 
-  @Column({ length: 50, nullable: false })
+  @Column()
   NombreUsuario: string;
 
-  @Column({ length: 200, nullable: false })
+  @Column()
   CorreoElectronico: string;
 
-  @Column({ length: 50, nullable: false })
+  @Column()
   Contrasena: string;
 
-  @Column({ nullable: true })
+  @Column()
   TotalVentas: number;
 
-  @Column({ nullable: true })
+  @Column()
   Balance: number;
+
+  @OneToMany(() => Venta, venta => venta.nombreVendedor)
+  ventasRealizadas: Venta[];
 }

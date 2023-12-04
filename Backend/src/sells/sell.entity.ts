@@ -1,15 +1,16 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import { Usuario } from 'src/users/user.entity';
+import { Producto } from 'src/products/product.entity';
 @Entity()
 export class Venta {
   @PrimaryGeneratedColumn()
   VentaID: number;
 
-  @Column({ length: 100, nullable: true })
-  NombreProducto: string;
+  @ManyToOne(() => Usuario, usuario => usuario.ventasRealizadas)
+  nombreVendedor: Usuario;
 
-  @Column({ length: 100, nullable: true })
-  NombreVendedor: string;
+  @ManyToOne(() => Producto, producto => producto.Cantidad)
+  nombreProducto: Producto;
 
   @Column({ type: 'datetime', nullable: true })
   FechaCreacion: Date;

@@ -8,8 +8,8 @@ import { AppService } from './app.service';
 import { Usuario } from './users/user.entity';
 import { Producto } from './products/product.entity';
 import { Venta } from './sells/sell.entity';
-import { DetalleVenta } from './sellDetail/sellDetail.entity';
 import { SellsModule } from './sells/sell.module';
+import { ReportModule } from './report/report.module';
 
 @Module({
   imports: [
@@ -20,7 +20,7 @@ import { SellsModule } from './sells/sell.module';
       username: 'usuario',
       password: '1234',
       database: 'commerk',
-      entities:[Usuario, Producto, Venta, DetalleVenta],
+      entities:[Usuario, Producto, Venta],
       //[__dirname + '/**/*/.entity{.ts,.js}'],
       synchronize: true,
       options: {
@@ -28,7 +28,7 @@ import { SellsModule } from './sells/sell.module';
         trustServerCertificate: true
       }
     }),
-    UsersModule, ProductsModule, SellsModule ],
+    UsersModule, ProductsModule, SellsModule, ReportModule ],
   controllers: [AppController],
   providers: [AppService],
 })
