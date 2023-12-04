@@ -24,7 +24,7 @@ const Welcome = () => {
               className="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
-          <button className="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Log In</button>
+          <button className="text-white bg-[#e44a3c] border-0 py-2 px-8 focus:outline-none hover:bg-[#a03127] rounded text-lg">Log In</button>
           <p className="text-xs text-gray-500 mt-3">Forgot your password?</p>
         </div>
       </div>

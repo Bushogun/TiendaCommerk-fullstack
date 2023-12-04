@@ -20,8 +20,6 @@ export class Producto {
   @Column({ nullable: true })
   Cantidad: number;
 
-  @Column({ type: 'varbinary', nullable: true })
-  ImagenProducto: Buffer;
 
   @Column({ type: 'datetime', nullable: true })
   FechaCreacion: Date;

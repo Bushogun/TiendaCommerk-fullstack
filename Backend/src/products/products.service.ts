@@ -14,7 +14,7 @@ export class ProductService{
     }
 
     createProduct(producto: CreateProductDto){
-      const newUser = this.userRepository.create(producto)
-      return this.userRepository.save(newUser)
+      const newProduct = this.userRepository.create(producto)
+      return this.userRepository.save(newProduct)
     }
 }

@@ -4,6 +4,5 @@ export class CreateProductDto{
   PrecioReal:number
   PrecioVenta:number
   Cantidad: number
-  ImagenProducto: Buffer
   FechaCreacion:Date
 }
